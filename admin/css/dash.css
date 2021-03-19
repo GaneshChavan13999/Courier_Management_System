@@ -1,0 +1,92 @@
+body {
+    font-size: 0.9rem;
+    /* width:100%; */
+}
+.box{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin: 1%;
+}
+a:visited{
+    color:white;
+}
+.c{
+    text-align: center;
+    max-width: 100%;
+    background: transparent;
+    border: black;
+}
+a{
+    background: transparent;
+    color: white;
+}
+.card-box{
+    background: transparent;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-clip: padding-box;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    -webkit-box-shadow: 0 0 24px 0 rgb(0 0 0 / 6%), 0 1px 0 0 rgb(0 0 0 / 2%);
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 6%), 0 1px 0 0 rgb(0 0 0 / 2%);
+}
+.right{
+    float: right!important;
+}
+.row1{
+    margin: 10px 25px;
+    height: 50px;
+    line-height: 50px;
+    background: cornflowerblue;
+}
+.row1 p {
+    /* align: center; */
+    height: 50px;
+    vertical-align: middle;
+    font-size: x-large;
+    margin: 0px;
+    text-align: center;
+}
+.center1 div div{
+    margin: 0 auto;
+}
+.center1 div div div div svg g g g {
+    color: rgb(23, 178, 220);
+    text-align :center;
+}
+
+.row {
+    font-size: 16px;
+    box-sizing: border-box; 
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: 15px;
+}
+.White{
+    background: white;
+}
+.blue{
+    background: blue;
+}
+.red{
+    background: rgb(255, 0, 0);
+}
+.orange{
+    background: rgb(253, 122, 0);
+}
+.cyan{
+    background: cyan;
+}
+@media (min-width: 768px){
+.box {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 45%;
+}
+}

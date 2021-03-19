@@ -1,0 +1,168 @@
+<?php
+error_reporting(0);
+include('dbconnection.php');
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="in.css">
+<link href="css/index.css" rel="stylesheet">
+<script src = "js/slider.js" type = "text/javascript"></script>
+</head>
+<body>
+<!-- Navebar  -->
+  <nav>
+    <ul class="menu">
+      <li class="logo"><a href="#">Courier Service</a></li>
+      <li class="item"><a href="#">Home</a></li>
+      <li class="item"><a href="#">About</a></li>
+      <li class="item"><a href="#">Blog</a></li>
+      <li class="item"><a href="#">Contact</a>
+      </li>
+      <li class="item has-submenu ">
+        <a tabindex="0">Log In</a>
+        <ul class="submenu">
+          <li class="subitem"><a href="#">Admin</a></li>
+          <li class="subitem"><a href="#">Staff</a></li>
+          <li class="subitem"><a href="#">Customer</a></li>
+        </ul>
+      </li>
+      <li class="item has-submenu ">
+        <a tabindex="0">Sign Up</a>
+        <ul class="submenu">
+          <li class="subitem"><a href="#">Admin</a></li>
+          <li class="subitem"><a href="#">Staff</a></li>
+          <li class="subitem"><a href="#">Customer</a></li>
+        </ul>
+      </li>
+      <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </nav>
+  <!-- script for navbar  -->
+  <script>
+            const toggle = document.querySelector(".toggle");
+            const menu = document.querySelector(".menu");
+            const items = document.querySelectorAll(".item");
+            
+            /* Toggle mobile menu */
+            function toggleMenu() {
+              if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+                toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+              } else {
+                menu.classList.add("active");
+                toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+              }
+            }
+            
+            /* Activate Submenu */
+            function toggleItem() {
+              if (this.classList.contains("submenu-active")) {
+                this.classList.remove("submenu-active");
+              } else if (menu.querySelector(".submenu-active")) {
+                menu.querySelector(".submenu-active").classList.remove("submenu-active");
+                this.classList.add("submenu-active");
+              } else {
+                this.classList.add("submenu-active");
+              }
+            }
+            
+            /* Close Submenu From Anywhere */
+            function closeSubmenu(e) {
+              let isClickInside = menu.contains(e.target);
+            
+              if (!isClickInside && menu.querySelector(".submenu-active")) {
+                menu.querySelector(".submenu-active").classList.remove("submenu-active");
+              }
+            }
+            /* Event Listeners */
+            toggle.addEventListener("click", toggleMenu, false);
+            for (let item of items) {
+              if (item.querySelector(".submenu")) {
+                item.addEventListener("click", toggleItem, false);
+              }
+              item.addEventListener("keypress", toggleItem, false);
+            }
+            document.addEventListener("click", closeSubmenu, false);
+  </script>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="a1.jpg" style="width:100%">
+    <div class="text">A Text</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="a2.jpg" style="width:100%">
+    <div class="text">A Text</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="a3.jpg" style="width:100%">
+    <div class="text">B Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="a4.jpg" style="width:100%">
+    <div class="text">C Three</div>
+  </div>
+</div>
+
+
+
+<div class="container">
+
+  <!-- Jumbotron Header -->
+  <header class="containerForm">
+    <form name="search" method="post">
+  <!-- Jumbotron Header -->
+     <div class="card my-4">
+        <h5 class="card-header">Tracking / Refrence Number</h5>
+        <div class="card-body"></div>
+        <div class="wrap">
+          <div class="search">
+             <input type="text" class="searchTerm form-control" placeholder="Search for..." required="true">
+             <button type="submit" class="searchButton" name="search">
+               <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </form>
+  </header>
+</div>
+<footer>
+  <section class="footer-social-section flex-rw">
+    <span class="footer-social-overlap footer-social-connect">
+    CONNECT <span class="footer-social-small">with</span> US
+    </span>
+    <span class="footer-social-overlap footer-social-icons-wrapper">
+    <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa-snapchat-square"></i></a>
+    <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+    <a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+    <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+    </span>
+</section>
+<section class="footer-bottom-section flex-rw">
+<div class="footer-bottom-wrapper">   
+<i class="fa fa-copyright" role="copyright">
+
+</i> 2019 Pavilion in <address class="footer-address" role="company address">Bergen, NY</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
+  </div>
+  <div class="footer-bottom-wrapper">
+  <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+    </div>
+</section>
+</footer>
+<script>
+  var slideIndex = 0;
+  showSlides();
+</script>
+
+
+</body>
+</html>
